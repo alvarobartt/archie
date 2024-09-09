@@ -61,7 +61,7 @@ ul li {
   text-indent: -2ch;
 }
 ul > li::before {
-  content: '* ';
+  /* content: '* '; */
   font-weight: bold;
 }
 
@@ -137,12 +137,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1em 0;
+  margin: 1em 0 4em;
   line-height: 2.5em;
 }
 
 header .main {
   font-size: 1.5rem;
+}
+header nav > * {
+  margin-right: 0.5em;
+}
+header nav > *:last-child {
+  margin-right: 0;
 }
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
@@ -174,9 +180,10 @@ h6::before { color: var(--maincolor); content: '###### '; }
 footer {
   display: flex;
   align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
+  border-top: 0.3rem dotted var(--bordercl);
   padding: 2rem 0rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 .soc {
   display: flex;
@@ -190,6 +197,7 @@ footer {
 }
 .footer-info {
   padding: var(--footer-padding);
+  text-align: center;
 }
 
 /* Common */
@@ -339,4 +347,12 @@ table th{
 table td{
   padding: 6px 13px;
   border: 1px solid #dfe2e5;
+}
+
+/* Custom CSS */
+.section-divider {
+  align-items: center;
+  border-top: 0.3rem dotted var(--bordercl);
+  padding: 1rem 0rem;
+  margin-top: 2rem;
 }

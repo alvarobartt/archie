@@ -2,9 +2,9 @@
 	<div class="main">
 		<a href="{{ absURL "/" }}">{{ .Site.Title }}</a>
 	</div>
-	<nav>
+	<nav class="spaced-nav">
 		{{ range .Site.Menus.main }}
-		<a href="{{ .URL }}">{{ .Name }}</a>
+		<a href="{{ .URL }}" {{ if hasPrefix .URL "http" }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a>
 		{{ end }}
 		{{ if eq .Site.Params.mode "toggle" -}}
         | <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
